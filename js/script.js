@@ -32,11 +32,42 @@ const handleMouseUp = (key) => {
     key.style.background = 'white'
 }
 
+    //Para mobile
+const handleTouchStart = (key) => {
+
+    playNote(key.getAttribute('data-note'));
+
+    if(key.className.includes('black')) {
+        key.classList.add('black--pressed')
+        return;
+    }
+    
+    key.style.background = '#ddd'
+    
+}
+
+const handleTouchEnd = (key) => {
+
+    if(key.className.includes('black')) {
+        key.classList.remove('black--pressed')
+        return;
+    }
+
+    key.style.background = 'white'
+}
+
+
 keys.forEach((key) => {
 
     key.addEventListener('mousedown', () => handleMousedown(key))
 
     key.addEventListener('mouseup', () => handleMouseUp(key))
+
+        //Para mobile
+    key.addEventListener('touchstart', () => handleTouchStart(key))
+
+    key.addEventListener('touchend', () => handleTouchEnd(key))
+
 
 })
 
