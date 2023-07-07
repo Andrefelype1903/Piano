@@ -1,0 +1,16 @@
+{
+    "name": "Piano",
+    "short_name": "Piano",
+    "icons": [
+        {
+            "src": "../fiveicon/51XAaKiWG0L.png",
+            "sizes": "192x192"
+        }
+    ],
+
+    "start_url": "../index.html",
+    "display": "standalone",
+    "theme_color": "#ffffff",
+    "backgroud_color": "#ffffff"
+
+}
